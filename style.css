@@ -21,7 +21,7 @@
     padding: var(--spacing);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows:repeat(3,1fr);
     gap: var(--spacing);
   }
 
@@ -31,15 +31,12 @@
     grid-row: 1/3;
     padding: var(--spacing);
     display: grid;
+    gap: var(--spacing);
   }
 
   header > p {
     align-items: center;
     text-align: justify;
-  }
-
-  body > section {
-    border: 1px solid black;
   }
 
   main {
@@ -62,7 +59,6 @@
     padding: var(--spacing);
     display: grid;
     gap: var(--spacing);
-    grid-template-rows: (auto-fit,1fr);
   }
 
   footer > p {
@@ -70,12 +66,18 @@
   }
 
   footer > button {
-    width: 25%;
-    height: 60px;
+    width: 150px;
+    padding: 20px;
   }
 
+  @media (max-width: 500px){
 
-
+    body {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    
+  }
 
 
   .school {
