@@ -18,11 +18,10 @@
   
   body {
     height: 100svh;
+    padding: var(--spacing);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 
-                        1fr 
-                        1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: var(--spacing);
   }
 
@@ -36,6 +35,7 @@
 
   header > p {
     align-items: center;
+    text-align: justify;
   }
 
   body > section {
@@ -47,6 +47,12 @@
     color: var(--blue-color);
     border: 2px solid var(--blue-color);
     padding: var(--spacing);
+    display: grid;
+  }
+
+  main > h2 {
+    align-self: center;
+    text-align: center;
   }
 
   footer {
@@ -55,6 +61,17 @@
     grid-column: 2/4;
     padding: var(--spacing);
     display: grid;
+    gap: var(--spacing);
+    grid-template-rows: (auto-fit,1fr);
+  }
+
+  footer > p {
+    text-align: justify;
+  }
+
+  footer > button {
+    width: 25%;
+    height: 60px;
   }
 
 
